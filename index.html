@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel = "stylesheet" href="css/style.css">
+        <title>HTML Document</title>
+        <div>
+            <h1 class="Header">
+                <i>Резюме</i>          
+            </h1>
+        </div>
+        <style>
+            a.button1 {
+            display: inline-block;
+            text-decoration: none;
+            padding: 1em;
+            outline: none;
+            border-radius: 1px;
+            }
+            a.button1:hover {
+            background-image:
+            radial-gradient(1px 45% at 0% 50%, rgba(0,0,0,.6), transparent),
+            radial-gradient(1px 45% at 100% 50%, rgba(0,0,0,.6), transparent); 
+            }
+            a.button1:active {
+            background-image:
+            radial-gradient(45% 45% at 50% 100%, rgba(255,255,255,.9), rgba(255,255,255,0)),
+            linear-gradient(rgba(255,255,255,.4), rgba(255,255,255,.3));
+            box-shadow:
+            inset rgba(162,95,42,.4) 0 0 0 1px,
+            inset rgba(255,255,255,.9) 0 0 1px 3px;
+            }
+            .Photo{
+                width: 350px;
+                height: 350px;
+                box-shadow: 50px 10px 100px 2px rgba(34, 60, 80, 0.2);
+            }
+            .Name{
+                width: 430px;
+                box-shadow: 5px 5px 10px 2px rgba(34, 60, 80, 0.2);
+            }
+            .Name:hover{color: #FFE4C4}
+            .Header:hover{color: #4B0082}
+        </style>
+    </head>
+    <body id="body" style="background-color: #FFFAFA;">
+        <div
+            class="Name">
+            <h1>
+                <i id="hSurname">Шергазин</i>
+                <i id="hName">Кирилл</i>
+                <i id="hPatronymic">Тигранович</i> <br>
+                АДБ-18-06
+            </h1>
+        </div> 
+        <div
+                class= "Photo">
+                <img src="https://sun9-21.userapi.com/impg/QuJXbYgaqH-WQjIyLX02FzJucpUmFpdFkU6XTA/1n_L-NYqUBI.jpg?size=1437x1437&quality=96&sign=fa55c23cf52670fd3228157b3e18e861&type=album"
+                 width="350" height="350">
+            </div>
+        <a href="#" id = "Black" class="button1" onclick="ChangeColor('Yellow')">Желтый</a>
+        <a href="#" id = "White" class="button1" onclick="ChangeColor('White')">Белый</a>
+        <a href="#" id = "Red" class="button1" onclick="ChangeColor('Red')">Красный</a>
+        <a href="#" id = "Green" class="button1" onclick="ChangeColor('Green')">Зеленый</a>
+        <script src = "js/kod.js"></script>
+
+        <p><input type="text" id="userSurname" placeholder="Ввод фимилии" size="20" /></p>
+        <p><input type="text" id="userName" placeholder="Ввод имени" size="20" /></p>
+        <p><input type="text" id="userPatronymic" placeholder="Ввод Отчества" size="20" /></p>
+        <button type="sumbit" onclick="ChangeNames()">Изменить</button>
+    </body>
+</html>
